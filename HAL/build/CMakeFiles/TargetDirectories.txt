@@ -1,0 +1,3 @@
+/home/yangzhihan/Router-Lab/HAL/build/CMakeFiles/rebuild_cache.dir
+/home/yangzhihan/Router-Lab/HAL/build/CMakeFiles/edit_cache.dir
+/home/yangzhihan/Router-Lab/HAL/build/CMakeFiles/router_hal.dir

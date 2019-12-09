@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/shell.dir/shell.cpp.o  -o shell -rdynamic ../HAL/librouter_hal.a -lreadline -lncurses -lpcap 
