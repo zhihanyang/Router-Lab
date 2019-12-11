@@ -1,4 +1,5 @@
-#include "router.h"
+#include "../boilerplate/router.h"
+#include "../boilerplate/rip.h"
 #include <stdint.h>
 #include <stdlib.h>
 #include <algorithm>
@@ -48,6 +49,23 @@ void update(bool insert, RoutingTableEntry entry) {
       }
     }
   }
+}
+
+void update(RoutingTableEntry entry) {
+  // TODO:
+    for(auto iter = routingTable.cbegin(); iter != routingTable.cend(); iter++){
+      if((*iter).addr == entry.addr && (*iter).len == entry.len){
+        if(entry.if_index == (*iter).if_index || entry.metric +1 <= (*iter).metric){
+          routingTable.erase(iter);
+          routingTable.insert(routingTable.end(),entry);
+        } 
+        return;
+      }
+    }
+    // if(route_change)
+    routingTable.insert(routingTable.end(),entry);
+    //printf("len:%d",entry.len);
+
 }
 
 /**
